@@ -6,6 +6,7 @@
     pip install django
     django-admin startproject project .
     python manage.py startapp contact
+    python manage.py runserver
     ```
 
 ## Configurar o git
@@ -37,7 +38,7 @@
 
 ## Trabalhando com o model do Django
 
-    ```
+    ``` python
     # Importe o módulo
     from contact.models import Contact
     # Cria um contato (Lazy)
@@ -65,7 +66,8 @@
     # Seleciona contatos usando filtros
     # Retorna QuerySet[]
     contacts = Contact.objects.filter(**filters).order_by('-id')
-
+    ```
+    ``` python 
     >>> from contact.models import Contact
     >>> Contact
     <class 'contact.models.Contact'>
